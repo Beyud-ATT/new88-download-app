@@ -194,10 +194,15 @@ body {
     border-right: none;
     padding: 8px 0;
     border-bottom: 1px solid #333;
+    font-size: 10px;
   }
 
   .footer-nav a:last-child {
     border-bottom: none;
+  }
+
+  .footer-nav-separator {
+    display: none;
   }
 }
 
@@ -215,11 +220,6 @@ body {
     min-width: 60px;
   }
 
-  .nav-icon {
-    width: 28px;
-    height: 28px;
-  }
-
   .hero h1 {
     font-size: 18px;
   }
@@ -229,11 +229,7 @@ body {
   }
 
   .text-content-title h1 {
-    font-size: 17px;
-  }
-
-  .text-content-title h2 {
-    font-size: 14px;
+    text-wrap-mode: wrap;
   }
 
   .content-grid {
