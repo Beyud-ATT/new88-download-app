@@ -1,0 +1,284 @@
+/* These are additions/modifications to your existing CSS */
+
+/* General responsive fixes */
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Fix for action buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.action-btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 32%;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Main content responsiveness */
+.text-content {
+  width: 45%;
+  padding-right: 20px;
+}
+
+.image-content {
+  width: 55%;
+}
+
+/* Fix for social icons */
+.social-icons-wrapper {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+
+  .action-buttons {
+    padding: 0;
+  }
+
+  .action-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Medium screens (tablets & small desktops) */
+@media (max-width: 992px) {
+  .footer-sections {
+    justify-content: space-around;
+    padding: 0 15px;
+  }
+
+  .footer-section {
+    width: 45% !important;
+    margin-bottom: 30px;
+  }
+
+  .text-content,
+  .image-content {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .text-content {
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+
+  .large-image {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .brand-ambassador img {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Small screens (tablets) */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .header-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .app-showcase {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .app-phone {
+    width: 60%;
+    max-width: 200px;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding: 0 15px;
+  }
+
+  .news-title {
+    width: 80%;
+  }
+
+  .news-title-content {
+    font-size: 20px;
+    line-height: normal;
+    padding: 10px;
+  }
+
+  .footer-section {
+    width: 100% !important;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .footer-links li::before {
+    display: none;
+  }
+
+  .footer-links li {
+    padding-left: 0;
+  }
+
+  .social-icons {
+    padding: 0 10px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .footer-nav a {
+    border-right: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-nav a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-item {
+    margin-right: 15px;
+    min-width: 60px;
+  }
+
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .text-content-title h1 {
+    font-size: 17px;
+  }
+
+  .text-content-title h2 {
+    font-size: 14px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .large-image {
+    max-width: 100%;
+  }
+
+  .news-title {
+    width: 90%;
+  }
+
+  .news-title-content {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .card-title {
+    font-size: 13px;
+  }
+
+  .card-text {
+    font-size: 11px;
+  }
+
+  .company-info {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+
+  /* Fix for social icons in mobile */
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .social-icon {
+    margin: 0;
+    justify-content: center;
+  }
+}
