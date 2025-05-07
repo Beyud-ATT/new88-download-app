@@ -97,12 +97,17 @@ body {
 .action-btn {
   padding: 10px 20px;
   border-radius: 25px;
-  color: white;
+
   font-weight: bold;
   border: none;
   cursor: pointer;
   width: 30%;
   text-align: center;
+}
+
+.action-btn a {
+  color: white;
+  text-decoration: none;
 }
 
 .btn-red {
