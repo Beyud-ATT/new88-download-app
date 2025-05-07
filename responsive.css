@@ -124,10 +124,6 @@ body {
     padding: 10px;
   }
 
-  .logo {
-    height: 30px;
-  }
-
   .header-btn {
     padding: 6px 10px;
     font-size: 12px;
@@ -213,6 +209,10 @@ body {
 
 /* Extra small screens (mobile phones) */
 @media (max-width: 480px) {
+  .logo {
+    height: 40px;
+  }
+
   .nav {
     overflow-x: auto;
     justify-content: flex-start;

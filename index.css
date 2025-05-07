@@ -28,10 +28,6 @@ body {
   margin: 0 auto;
 }
 
-.logo {
-  height: 40px;
-}
-
 .header-btn {
   background-color: var(--header-btn-bg);
   color: #000;
@@ -311,7 +307,7 @@ p {
 }
 
 .footer-section h3 {
-  color: #ff9800;
+  color: white;
   margin-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
@@ -656,6 +652,10 @@ p {
   .footer-section {
     width: 100% !important;
     text-align: center;
+  }
+
+  .footer-section h3 {
+    justify-content: center;
   }
 
   .social-icons {
