@@ -637,6 +637,7 @@ p {
   .action-btn {
     width: 80%;
     margin-bottom: 10px;
+    text-transform: uppercase;
   }
 
   .app-showcase {
