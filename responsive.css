@@ -23,7 +23,7 @@ body {
 }
 
 .action-btn {
-  padding: 10px 15px;
+  padding: 16px 20px;
   border-radius: 25px;
   color: white;
   font-weight: bold;
@@ -33,6 +33,11 @@ body {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.action-btn a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Main content responsiveness */
@@ -71,7 +76,7 @@ body {
 
   .action-btn {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 16px 20px;
   }
 }
 

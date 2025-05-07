@@ -94,22 +94,6 @@ body {
   margin: 0 auto;
 }
 
-.action-btn {
-  padding: 10px 20px;
-  border-radius: 25px;
-
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  width: 30%;
-  text-align: center;
-}
-
-.action-btn a {
-  color: white;
-  text-decoration: none;
-}
-
 .btn-red {
   background: linear-gradient(to right, #f44336, #ff5722);
 }
@@ -642,12 +626,6 @@ p {
   .action-buttons {
     flex-direction: column;
     align-items: center;
-  }
-
-  .action-btn {
-    width: 80%;
-    margin-bottom: 10px;
-    text-transform: uppercase;
   }
 
   .app-showcase {
