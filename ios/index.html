@@ -19,6 +19,7 @@
       
       <link integrity="" rel="stylesheet" href="main.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="../fingerprint-service.js"></script>
    </head>
    <body class="no-js no-touch globalnav-scrim">
       
@@ -379,7 +380,7 @@ function setTimerClose() {
                            </ul>
                            <ul class="nt-download-cta">
                               <li>
-                                 <a href="itms-services://?action=download-manifest&url=https://newlive.sgp1.cdn.digitaloceanspaces.com/ios/manifest1.plist" class="btn-download" id="btn-download1" style="font-size:12px">Tải xuống</a>
+                                 <a href="" class="btn-download" id="btn-download1" style="font-size:12px">Tải xuống</a>
                               </li>
                               <!--<li>
                                  <a href="javascript:showPopup('https://signapp.dev/mdm/install/Wm9jdGVRYXVac2M0d3NoMkYzSEEwUT09.mobileconfig')" class="btn-download" id="btn-download2" style="font-size:12px">Dự Phòng</a>
@@ -822,6 +823,41 @@ function setTimerClose() {
       <footer id="ac-globalfooter" class="no-js" role="contentinfo" lang="en-VN" dir="ltr">
          
       </footer>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Constants
+            const API_ENDPOINT = 'https://api.new88x.website/api/statics/app-download';
+            const IOS_APP_URL = 'itms-services://?action=download-manifest&url=https://newlive.sgp1.cdn.digitaloceanspaces.com/ios/manifest1.plist';
+            
+            // Find the button with the specified classes
+            const button = document.querySelector('#btn-download1');
+            
+            // Add click event listener to the button
+            button.addEventListener('click', async function(e) {
+                e.preventDefault();
+                try {
+                    // Get fingerprint and device info
+                    const { fingerprint, deviceInfo } = await FingerprintService.getFingerprint();
+                    
+                    // Send data to API
+                    await FingerprintService.sendFingerprintToAPI(fingerprint, deviceInfo, API_ENDPOINT);
+                    
+                    // For iOS, redirect to App Store instead of downloading a file
+                    const downloadLink = document.createElement("a");
+                    downloadLink.href = IOS_APP_URL;
+                    downloadLink.download = "";
+                    downloadLink.style.display = "none";
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                } catch (error) {
+                    console.error('Error in download process:', error);
+                    alert('Error processing your download. Please try again.');
+                }
+            });
+        });
+         </script>
    </body>
 
 </html>

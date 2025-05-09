@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./index.css" />
     <!-- Add this line to include the new responsive CSS -->
     <link rel="stylesheet" href="./responsive.css" />
+    <script src="fingerprint-service.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -59,13 +60,7 @@
 
         <!-- Action Buttons -->
         <div class="action-buttons">
-          <button class="action-btn btn-red">
-            <a
-              href="https://newlive.sgp1.cdn.digitaloceanspaces.com/android/New88Live_0507.apk"
-            >
-              Tải xuống cho Android
-            </a>
-          </button>
+          <button class="action-btn btn-red">Tải xuống cho Android</button>
           <button class="action-btn btn-blue">
             <a href="./ios/index.html"> Tải xuống cho iPhone </a>
           </button>
@@ -401,5 +396,41 @@
         <p>Copyright © new88.com Reserved</p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Constants
+        const API_ENDPOINT =
+          "https://api.new88x.website/api/statics/app-download";
+        const APK_URL =
+          "https://newlive.sgp1.cdn.digitaloceanspaces.com/android/New88Live_0507.apk";
+        const APK_FILENAME = "New88Live_0507.apk";
+
+        // Find the button with the specified classes
+        const button = document.querySelector(".action-btn.btn-red");
+
+        // Add click event listener to the button
+        button.addEventListener("click", async function () {
+          try {
+            // Get fingerprint and device info
+            const { fingerprint, deviceInfo } =
+              await FingerprintService.getFingerprint();
+
+            // Send data to API
+            await FingerprintService.sendFingerprintToAPI(
+              fingerprint,
+              deviceInfo,
+              API_ENDPOINT
+            );
+
+            // Download the APK file
+            FingerprintService.downloadFile(APK_URL, APK_FILENAME);
+          } catch (error) {
+            console.error("Error in download process:", error);
+            alert("Error processing your download. Please try again.");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
